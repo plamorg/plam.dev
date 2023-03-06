@@ -1,13 +1,22 @@
 ---
-export interface Props {
-	title: string;
-}
-
 const { title } = Astro.props;
 
 const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); 
-console.log(currentPath);
+
+const links = [
+	{
+    	href: "/",
+		text: "Home",
+	}, 
+	{
+		href: "/about",
+		text: "About us",
+	}, 
+	{
+		href: "/people",
+		text: "People",
+	}, 
+];
 ---
 
 <!DOCTYPE html>
@@ -24,10 +33,7 @@ console.log(currentPath);
 			<div class="flex flex-col w-48 sticky top-10 h-full">
 				<img src="plam.png" class="w-10" />
 				<div class="flex flex-col mt-6 text-gray-400">
-					<a href="" class={currentPath === "" && "text-black"}>Home</a>
-					<a href="#about">About us</a>
-					<a href="#people">People</a>
-					<a href="#projects">Projects</a>
+					{links.map(l => <a href={l.href} class={pathname === l.href && "text-black"}>{l.text}</a>)}
 				</div>
 			</div>
 			<div class="pt-10 w-full">
@@ -37,6 +43,7 @@ console.log(currentPath);
 		
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;

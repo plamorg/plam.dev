@@ -3,12 +3,13 @@ export interface Props {
 	title: string;
 	body: string;
 	href: string;
+	id: string;
 }
 
-const { href, title, body } = Astro.props;
+const { href, title, body, id } = Astro.props;
 ---
 
-<div class="link-card mb-4">
+<div class="link-card mb-4" id={id}>
 	<a href={href}>
 		<h2>
 			{title}
