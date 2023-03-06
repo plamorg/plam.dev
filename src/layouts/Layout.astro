@@ -10,11 +10,11 @@ const links = [
 	}, 
 	{
 		href: "/about",
-		text: "About us",
+		text: "About",
 	}, 
 	{
-		href: "/people",
-		text: "People",
+		href: "/contact",
+		text: "Contact",
 	}, 
 ];
 ---
@@ -31,7 +31,7 @@ const links = [
 	<body class="animate-fade-in">
 		<div class="flex flex-col sm:flex-row px-8 sm:px-10 w-full">
 			<div class="flex flex-col w-48 sm:sticky top-0 mt-8 sm:mt-10 h-full">
-				<img src="plam.png" class="w-10" />
+				<img src="plam.png" class="w-9" />
 				<div class="flex flex-col mt-6 text-gray-400">
 					{links.map(l => <a href={l.href} class={`${pathname === l.href && "text-black"}`}>{l.text}</a>)}
 				</div>
