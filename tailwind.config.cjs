@@ -4,8 +4,8 @@ module.exports = {
 	theme: {
 		extend: {
 			animation: {
-				'appear': 'appear 0.5s ease-in-out',
-				'fade-in': 'fade-in 0.4s ease-in-out',
+				'appear': 'appear 0.7s cubic-bezier(.05,.63,.73,.98)',
+				'fade-in': 'fade-in 0.5s',
 			}, 
 			keyframes: {
 				'appear': {
