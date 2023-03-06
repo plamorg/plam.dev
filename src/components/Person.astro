@@ -5,22 +5,22 @@ const { name, website, github, email, linkedin, about, location, picture } = Ast
 const { id } = Astro.props;
 ---
 
-<div class="w-full px-5 py-4 flex flex-col gap-1 w-64">
+<div class="px-5 py-4 flex flex-col gap-1 w-80">
     <div class="mx-auto">
-        <img src={picture} width={120} height={120} class="rounded-full"></img>
+        <img src={picture} width={120} height={120} class="rounded-full" />
     </div>
-    <div class="w-full">
-        <h4 class="text-md font-medium text-center">{name}</h4>
-        <div class="flex flex-row gap-1 mx-auto justify-center items-start mb-2">
+    <div class="w-full flex flex-col items-center">
+        <h4 class="text-lg font-medium text-center font-serif">{name}</h4>
+        <div class="flex flex-row gap-1 mx-auto justify-center mt-1">
             <Icon class="w-4" name="mdi:location" />
-            <p class="text-sm">{location}</p>
+            <p class="text-xs mt-0.5">{location}</p>
         </div>
-        <p class="text-xs">{about}</p>
-        <div class="flex flex-row gap-1">
-            <a href={`mailto:${email}`}>@</a>
-            <a href={website}>://</a>
-            <Icon class="w-6" name="mdi:github" />
-            <Icon class="w-6" name="mdi:linkedin" />
+        <p class="text-xs mt-3 serif text-center">{about}</p>
+        <div class="flex flex-row gap-1 mt-2">
+            <Icon class="w-5" name="mdi:email" />
+            <Icon class="w-5" name="mdi:person" />
+            <Icon class="w-5" name="mdi:github" />
+            <Icon class="w-5" name="mdi:linkedin" />
         </div>
     </div>
 </div>    
