@@ -4,8 +4,8 @@ import Card from '../components/Card.astro';
 ---
 
 <Layout title="plam">
-	<main class="flex flex-col md:flex-row">
+	<main class="flex flex-col w-full">
 
-        <Card href="https://smjleo.com" title="smj leeo" body="hi" />
+        {Array(20).fill(0).map((_, i) => <Card href="https://smjleo.com" title="smj leeo" body="hi" /> )}
 	</main>
 </Layout>
