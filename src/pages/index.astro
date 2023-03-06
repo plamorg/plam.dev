@@ -5,7 +5,7 @@ import Header from '../components/Header.astro';
 ---
 
 <Layout title="plam">
-	<main class="flex flex-col w-full">
+    <main class="flex flex-col w-full">
         <Header />
         {Array(20).fill(0).map((_, i) => <Card href="https://smjleo.com" id={`#card${i}`} title="smj leeo" body="hi" /> )}
 	</main>
