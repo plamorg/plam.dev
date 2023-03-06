@@ -30,7 +30,7 @@ const links = [
 	</head>
 	<body>
 		<div class="flex px-10 w-full">
-			<div class="flex flex-col w-48 sticky top-10 h-full">
+			<div class="flex flex-col w-48 sticky top-0 mt-10 h-full">
 				<img src="plam.png" class="w-10" />
 				<div class="flex flex-col mt-6 text-gray-400">
 					{links.map(l => <a href={l.href} class={pathname === l.href && "text-black"}>{l.text}</a>)}
