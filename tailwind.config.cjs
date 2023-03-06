@@ -2,6 +2,9 @@
 module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
+		screens: {
+			'xs': '480px',
+		},
 		extend: {
 			animation: {
 				'appear': 'appear 0.7s cubic-bezier(.05,.63,.73,.98)',
