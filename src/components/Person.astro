@@ -5,23 +5,25 @@ const { name, website, github, email, linkedin, about, location, picture } = Ast
 const { id } = Astro.props;
 ---
 
-<div class="px-5 py-4 flex flex-col gap-1 w-80">
-    <div class="mx-auto">
-        <img src={picture} width={120} height={120} class="rounded-full" />
+<div class="px-5 py-4 flex flex-col justify-between w-full">
+    <div class="flex flex-col gap-1">
+        <div class="mx-auto">
+            <img src={picture} width={120} height={120} class="rounded-full" />
+        </div>
+        <div class="w-full flex flex-col items-center">
+            <h4 class="text-lg font-medium text-center font-serif">{name}</h4>
+            <div class="flex flex-row gap-1 mx-auto justify-center mt-1">
+                <Icon class="w-4" name="mdi:location" />
+                <p class="text-xs mt-0.5">{location}</p>
+            </div>
+            <p class="text-xs mt-3 serif text-center">{about}</p>
+        </div>
     </div>
-    <div class="w-full flex flex-col items-center">
-        <h4 class="text-lg font-medium text-center font-serif">{name}</h4>
-        <div class="flex flex-row gap-1 mx-auto justify-center mt-1">
-            <Icon class="w-4" name="mdi:location" />
-            <p class="text-xs mt-0.5">{location}</p>
-        </div>
-        <p class="text-xs mt-3 serif text-center">{about}</p>
-        <div class="flex flex-row gap-1 mt-2">
-            <a href={`mailto:${email}`} target="_blank"><Icon class="w-5" name="mdi:email" /></a>
-            <a href={website} target="_blank"><Icon class="w-5" name="mdi:person" /></a>
-            <a href={`https://github.com/${github}`} target='_blank'><Icon class="w-5" name="mdi:github" /></a>
-            <a href={`https://linkedin.com/in/${linkedin}`} target='_blank'><Icon class="w-5" name="mdi:linkedin" /></a>
-        </div>
+    <div class="flex flex-row gap-1 mt-2 align-center justify-center">
+        <a href={`mailto:${email}`} target="_blank"><Icon class="w-5" name="mdi:email" /></a>
+        <a href={website} target="_blank"><Icon class="w-5" name="mdi:person" /></a>
+        <a href={`https://github.com/${github}`} target='_blank'><Icon class="w-5" name="mdi:github" /></a>
+        <a href={`https://linkedin.com/in/${linkedin}`} target='_blank'><Icon class="w-5" name="mdi:linkedin" /></a>
     </div>
 </div>    
 
