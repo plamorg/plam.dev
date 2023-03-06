@@ -23,7 +23,27 @@ const people = [
         about: "First year Computer Science student at the University of Oxford.",
         location: "Oxford, United Kingdom",
         picture: "/smjleo.webp"
-    }
+    },
+    {
+        name: "Edward Wibowo",
+        website: "https://edwardwibowo.com/",
+        github: "claby2",
+        email: "edward@plam.dev",
+        linkedin: "edward-wibowo",
+        about: "First year Mathematics and Computer Science student at Brown University.",
+        location: "Providence, Rhode Island",
+        picture: "/claby.webp"
+    },
+    {
+        name: "Vir Chaudhury",
+        website: "https://hexular.net/",
+        github: "virchau13",
+        email: "plam@hexular.net",
+        linkedin: "vir-chaudhury-a83b5725a",
+        about: "Full-time National Serviceman at the Singapore Armed Forces.",
+        location: "Singapore",
+        picture: "/vir.webp"
+    },
 ];
 ---
 
@@ -38,7 +58,7 @@ const people = [
                 <h3 class="text-xl max-w-3xl font-serif my-2">Our team</h3>
                 <h4 class="text-sm max-w-3xl my-2">Founded in Singapore, now based internationally.</h4>
             </div>
-            <div class="flex flex-col gap-2">
+            <div class="grid grid-cols-1 xs:grid-cols-2">
                 {people.map((person, i) => <Person person={person} id={i} />)}
             </div>
         </div>
