@@ -17,10 +17,10 @@ const { id } = Astro.props;
         </div>
         <p class="text-xs mt-3 serif text-center">{about}</p>
         <div class="flex flex-row gap-1 mt-2">
-            <Icon class="w-5" name="mdi:email" />
-            <Icon class="w-5" name="mdi:person" />
-            <Icon class="w-5" name="mdi:github" />
-            <Icon class="w-5" name="mdi:linkedin" />
+            <a href={`mailto:${email}`} target="_blank"><Icon class="w-5" name="mdi:email" /></a>
+            <a href={website} target="_blank"><Icon class="w-5" name="mdi:person" /></a>
+            <a href={`https://github.com/${github}`} target='_blank'><Icon class="w-5" name="mdi:github" /></a>
+            <a href={`https://linkedin.com/in/${linkedin}`} target='_blank'><Icon class="w-5" name="mdi:linkedin" /></a>
         </div>
     </div>
 </div>    
