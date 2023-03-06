@@ -4,62 +4,58 @@ const { title } = Astro.props;
 const pathname = new URL(Astro.request.url).pathname;
 
 const links = [
-	{
-    	href: "/",
-		text: "Home",
-	}, 
-	{
-		href: "/about",
-		text: "About",
-	}, 
-	{
-		href: "/contact",
-		text: "Contact",
+    {
+        href: "/",
+        text: "Home",
+    }, 
+    {  
+        href: "/about",
+        text: "About",
 	}, 
 ];
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/plam.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<div class="flex flex-col sm:flex-row px-8 sm:px-10 w-full">
-			<div class="flex flex-col w-48 sm:sticky top-0 h-full">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/plam.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <div class="flex flex-col sm:flex-row px-8 sm:px-10 w-full">
+            <div class="flex flex-col w-48 sm:sticky top-0 h-full">
                 <div class="mt-8 sm:mt-10">
                     <img src="plam.svg" class="w-9" />
                     <div class="flex flex-col mt-6 text-gray-400">
                         {links.map(l => <a href={l.href} class={`${pathname === l.href && "text-black"}`}>{l.text}</a>)}
                     </div>
                 </div>
-			</div>
-			<div class="pt-10 w-full animate-fade-in">
-				<slot />
-			</div>
-		</div>	
-		
-	</body>
+            </div>
+            <div class="pt-10 w-full animate-fade-in">
+                <slot />
+            </div>
+        </div>	
+        
+    </body>
 </html>
 
 <style is:global>
-	:root {
-		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
-	}
-	html {
-		background-color: #F6F6F6;
-	}
-	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-	}
-	@font-face {
-		font-family: "Epilogue";
-		src: url("Epilogue-VariableFont_wght.ttf") format("truetype");
-	}
+    :root {
+        --accent: 124, 58, 237;
+        --accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+    }
+    html {
+        background-color: #F6F6F6;
+    }
+    code {
+        font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+            Bitstream Vera Sans Mono, Courier New, monospace;
+    }
+    @font-face {
+        font-family: "Epilogue";
+        src: url("Epilogue-VariableFont_wght.ttf") format("truetype");
+    }
 </style>
