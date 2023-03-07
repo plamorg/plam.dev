@@ -28,7 +28,7 @@ const links = [
         <div class="flex flex-col sm:flex-row px-8 sm:px-10 w-full">
             <div class="flex flex-col w-48 sm:sticky top-0 h-full">
                 <div class="mt-8 sm:mt-10">
-                    <img src="plam.svg" class="w-9" />
+                    <img src="/plam.svg" class="w-9" />
                     <div class="flex flex-col mt-6 text-gray-400">
                         {links.map(l => <a href={l.href} class={`link transition duration-200 ${pathname === l.href && "text-black"}`}>{l.text}</a>)}
                     </div>
@@ -59,6 +59,6 @@ const links = [
     }
     @font-face {
         font-family: "Epilogue";
-        src: url("Epilogue-VariableFont_wght.ttf") format("truetype");
+        src: url("/Epilogue-VariableFont_wght.ttf") format("truetype");
     }
 </style>
