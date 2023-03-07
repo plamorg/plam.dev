@@ -1,18 +1,17 @@
 ---
-const { href, name, id, url, github, image } = Astro.props;
+const { href, name, id, github, image } = Astro.props;
 ---
 
 <div class="w-full h-56 md:h-72 bg-center bg-cover bg-[#0007] bg-blend-darken" id={id} style={{backgroundImage: `url(${image});
 `}}>
-    <div class="w-full h-full flex flex-col justify-end text-white opacity-90 p-6 md:p-8 relative top-0 hover:-top-3 transition-all duration-300 ease-in-out">
-        <a href={href}>
-            <h2 class="font-serif text-xl">
-                {name}
-            </h2>
-            <p class="mt-2 text-sm font-light">
-                <slot />
-            </p>
-        </a>
-    </div>
-    
+    <a href={href} target='_blank'>
+        <div class="w-full h-full flex flex-col justify-end text-white opacity-90 p-6 md:p-8 relative top-0 hover:-top-3 transition-all duration-300 ease-in-out">
+                <h2 class="font-serif text-xl">
+                    {name}
+                </h2>
+                <p class="mt-2 text-sm font-light">
+                    <slot />
+                </p>
+        </div>
+    </a>
 </div>
