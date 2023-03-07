@@ -30,7 +30,7 @@ const links = [
                 <div class="mt-8 sm:mt-10">
                     <img src="/plam.svg" class="w-9" />
                     <div class="flex flex-col mt-6 text-gray-400">
-                        {links.map(l => <a href={l.href} class={`link transition duration-200 ${pathname === l.href && "text-black"}`}>{l.text}</a>)}
+                        {links.map(l => <a href={l.href} class={`link transition duration-200 ${(pathname === l.href || pathname.slice(0, -1) === l.href) && "text-black"}`}>{l.text}</a>)}
                     </div>
                 </div>
             </div>
