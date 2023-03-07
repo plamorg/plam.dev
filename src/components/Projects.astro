@@ -1,0 +1,27 @@
+---
+import Project from './Project.astro'
+
+const projects = [
+    {
+        id: "smjleo",
+        name: "smj leeo",
+        href: "https://smjleo.com",
+        github: "https://github.com/smjleo",
+        desc: "hi",
+        image: "/projects/crisp-cropped.jpg",
+    }
+]
+---
+
+<div>
+    {projects.map(p => 
+        <Project
+            href={p.href} 
+            id={p.id} 
+            name={p.name} 
+            image={p.image}
+        > 
+            {p.desc} 
+        </Project> 
+     )}
+</div>

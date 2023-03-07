@@ -1,0 +1,15 @@
+---
+const { href, name, id, url, github, image } = Astro.props;
+---
+
+<div class="mb-4 bg-cover w-full h-64" id={id} style={{backgroundImage: `url('${image}')`}}>
+    <a href={href}>
+        <h2>
+            {name}
+            <span>&rarr;</span>
+        </h2>
+        <p>
+            <slot />
+        </p>
+    </a>
+</div>

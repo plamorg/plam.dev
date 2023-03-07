@@ -1,12 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Projects from '../components/Projects.astro';
 import Header from '../components/Header.astro';
 ---
 
 <Layout title="plam">
     <main class="flex flex-col w-full">
         <Header />
-        {Array(20).fill(0).map((_, i) => <Card href="https://smjleo.com" id={`#card${i}`} title="smj leeo" body="hi" /> )}
+        <Projects />
 	</main>
 </Layout>
